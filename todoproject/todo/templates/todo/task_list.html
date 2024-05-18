@@ -1,0 +1,15 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+    <h2>Все дела</h2>
+    <ul class="task-list">
+        {% for task in tasks %}
+            <li class="task-item">
+                <span class="task-title">{{ task.title }}</span>
+                <span class="task-description">{{ task.description }}</span>
+                <a href="{% url 'task_update' task.id %}" class="task-action">Редактировать</a>
+                <a href="{% url 'task_delete' task.id %}" class="task-action">Удалить</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

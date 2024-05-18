@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список дел</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'todo/styles.css' %}">
+</head>
+<body>
+    <h1>Список дел</h1>
+    <nav>
+        <a href="{% url 'task_list' %}">Все дела</a>
+        <a href="{% url 'task_create' %}">Добавить дело</a>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
