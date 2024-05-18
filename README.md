@@ -1,2 +1,2 @@
-# todo
+# ToDo
 Project for Dubna University
